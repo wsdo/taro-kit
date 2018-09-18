@@ -3,7 +3,7 @@ import { HTTP_STATUS, COMMON_STATUS, RESULT_STATUS } from '../const/status.js'
 // import config from '../config/index.js'
 import { logError } from '../utils'
 
-const baseURL = "http://api.shudong.wang/v1/"
+const baseURL = "http://beeapi.shudong.wang/v1/"
 // Taro.request({
 //   url: baseURL + '',
 //   data: {
