@@ -45,7 +45,7 @@ class Index extends Component {
     super(props)
     console.log('props', props);
     // this.state = { date: new Date() }
-    // props.list()
+    props.list()
   }
   componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps)
@@ -61,19 +61,34 @@ class Index extends Component {
   render() {
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <Button className='dec_btn' onClick={this.props.list}>list</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
-        <View>
-          {
-            this.props.list.map((item, index) => {
-              return <View key={index}>{item.title}</View>
-            })
-          }
+        <View className='news'>
+          <View className='item'>
+            <View className='desc'>
+              <View className='title'></View>
+              <View className='info'></View>
+            </View>
+            <View className='rightImage'>
+
+            </View>
+          </View>
+          <View>
+            {
+              this.props.list.map((item, index) => {
+                return <View className='item' key={index}>
+                  <View className='info'>
+                    <View className='title'>{item.title}</View>
+                    <View className='footer'>
+                      <View className='user'>{item.username}</View>
+                      <View className='comment'>{item.username}</View>
+                    </View>
+                  </View>
+                  <View className='rightImage'><Image calssName='img' src={item.image_url} /></View>
+                </View>
+              })
+            }
+          </View>
         </View>
+
       </View >
     )
   }

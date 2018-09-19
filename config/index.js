@@ -2,6 +2,10 @@ const config = {
   projectName: 'demo',
   date: '2018-9-18',
   designWidth: 750,
+  deviceRatio:{
+    '750': 1/2,
+    '375': 1
+  },
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: {

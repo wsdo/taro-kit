@@ -14,7 +14,8 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/me/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -30,15 +31,15 @@ class App extends Component {
       list: [
         {
           pagePath: "pages/index/index",
-          selectedIconPath: "/common/image/tab/classic@highlight.png",
-          iconPath: "/common/image/tab/classic.png",
+          selectedIconPath: "./common/image/tab/discover@highlight.png",
+          iconPath: "./common/image/tab/discover.png",
           text: "发现"
         },
         {
           pagePath: "pages/me/index",
-          selectedIconPath: "/common/image/tab/my@highlight.png",
-          iconPath: "/common/image/tab/my.png",
-          text: "喜欢"
+          selectedIconPath: "./common/image/tab/my@highlight.png",
+          iconPath: "./common/image/tab/my.png",
+          text: "我"
         }
       ]
     }

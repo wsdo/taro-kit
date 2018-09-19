@@ -21,7 +21,7 @@ export default function counter (state = INITIAL_STATE, action) {
     case LIST:
        return {
          ...state,
-         list: action.payload.data.article
+         list: action.payload.data.news
        }
      default:
        return state
