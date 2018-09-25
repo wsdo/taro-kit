@@ -79,7 +79,11 @@ export function asyncAdd() {
 //     'content-type': 'application/json'
 //   }
 // }))
-export const list = createApiAction(LIST, params => api.get('news/list', params))
+// export const list = createApiAction(LIST, params => api.get('news/list', params))
+export const list = createApiAction(LIST, params => {
+  console.log('list',params);
+  return api.get('news/list', params)
+})
 
 export default bindActionCreators({
   list,

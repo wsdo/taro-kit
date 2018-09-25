@@ -3,7 +3,7 @@ import { HTTP_STATUS, COMMON_STATUS, RESULT_STATUS } from '../const/status.js'
 // import config from '../config/index.js'
 import { logError } from '../utils'
 
-const baseURL = "http://beeapi.shudong.wang/v1/"
+const baseURL = "https://shudong.wang/v1/"
 // Taro.request({
 //   url: baseURL + '',
 //   data: {
@@ -21,6 +21,7 @@ export default {
     let { url, data } = params
     // let token = getApp().globalData.token
     // if (!token) login()
+    console.log('params', params)
     let contentType = 'application/x-www-form-urlencoded'
     contentType = params.contentType || contentType
     const option = {
@@ -41,6 +42,7 @@ export default {
   },
   get(url, data = '') {
     let option = { url, data }
+    console.log('data', data)
     return this.baseOptions(option)
   },
   post: function (url, data, contentType) {

@@ -2,7 +2,7 @@ import { ADD, MINUS, LIST } from '../constants/counter'
 
 const INITIAL_STATE = {
   num: 0,
-  list:''
+  list:[]
 }
 
 export default function counter (state = INITIAL_STATE, action) {
@@ -19,9 +19,14 @@ export default function counter (state = INITIAL_STATE, action) {
          num: state.num - 1
        }
     case LIST:
+      let data = state.list.concat(action.payload.data.news)
+      // Object.assign(state.list, action.payload.data.news)
+      console.log('data',data)
+      console.log('state',state)
        return {
          ...state,
-         list: action.payload.data.news
+        //  list: action.payload.data.news
+         list: data
        }
      default:
        return state
