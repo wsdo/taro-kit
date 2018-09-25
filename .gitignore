@@ -3,3 +3,4 @@ dist/
 .rn_temp/
 node_modules/
 img/
+package-lock.json

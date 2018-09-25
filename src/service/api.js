@@ -1,21 +1,10 @@
 import Taro from '@tarojs/taro'
-import { HTTP_STATUS, COMMON_STATUS, RESULT_STATUS } from '../const/status.js'
-// import config from '../config/index.js'
+import { HTTP_STATUS } from '../const/status'
+import { base } from './config'
 import { logError } from '../utils'
 
-const baseURL = "https://shudong.wang/v1/"
-// Taro.request({
-//   url: baseURL + '',
-//   data: {
-//     foo: 'foo',
-//     bar: 10
-//   },
-//   header: {
-//     'content-type': 'application/json'
-//   }
-// })
-//   .then(res => console.log(res.data))
 const token = ''
+
 export default {
   baseOptions(params, method = 'GET') {
     let { url, data } = params
@@ -27,12 +16,20 @@ export default {
     const option = {
       isShowLoading: false,
       loadingText: '正在加载',
-      url: baseURL + url,
+      url: base + url,
       data: data,
       method: method,
       header: { 'content-type': contentType, 'token': token },
       success(res) {
-        return res
+        if (res.statusCode === HTTP_STATUS.NOT_FOUND) {
+          return logError('api', '请求资源不存在')
+        } else if (res.statusCode === HTTP_STATUS.BAD_GATEWAY) {
+          return logError('api', '服务端出现了问题')
+        } else if (res.statusCode === HTTP_STATUS.FORBIDDEN) {
+          return logError('api', '没有权限访问')
+        } else if (res.statusCode === HTTP_STATUS.SUCCESS) {
+          return res.data
+        }
       },
       error(e) {
         logError('api', '请求接口出现问题', e)
@@ -42,7 +39,6 @@ export default {
   },
   get(url, data = '') {
     let option = { url, data }
-    console.log('data', data)
     return this.baseOptions(option)
   },
   post: function (url, data, contentType) {

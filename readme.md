@@ -1,11 +1,17 @@
 > 项目会不断迭代，有需求欢迎issue
-
+> 如果能帮到你，那就给个star呗！
 ## 功能列表
 * [x] 封装api请求方式
 * [x] 更方便的创建action：增加createApiAction
 * [x] 基础像素试着为1倍即：1px 会编译成 2rpx（小程序默认是2倍）符合习惯
 * [x] 基础demo案列
 
+## 用法
+```
+npm i
+
+npm start
+```
 ## 更方面的创建action
 > 未封装前
 ```
@@ -36,9 +42,9 @@ export function list() {
   }
 }
 ```
-![2018-09-25-15-50-45](http://file.shudong.wang/2018-09-25-15-50-45.png)
+![2018-09-25-15-50-45](http://img.shudong.wang/2018-09-25-15-50-45.png)
 > 封装后请求api的使用方式
 ```
 export const list = createApiAction(LIST, params => api.get('news/list', params))
 ```
-![2018-09-25-15-51-45](http://file.shudong.wang/2018-09-25-15-51-45.png)
+![2018-09-25-15-51-45](http://img.shudong.wang/2018-09-25-15-51-45.png)

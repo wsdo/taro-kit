@@ -19,7 +19,7 @@ export default function counter (state = INITIAL_STATE, action) {
          num: state.num - 1
        }
     case LIST:
-      let data = state.list.concat(action.payload.data.news)
+      let data = state.list.concat(action.payload.data)
       // Object.assign(state.list, action.payload.data.news)
       console.log('data',data)
       console.log('state',state)

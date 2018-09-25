@@ -43,17 +43,19 @@ class Index extends Component {
     console.log('props', props);
     // this.state = { date: new Date() }
     // let params = {
-    //   page: 2, perPage: 2
+    //   page: 2, per_page: 2
     // }
     this.state = {
-      page: 1, perPage: 10
+      page: 1, per_page: 10
     }
+    if (Object.keys(props).length === 0) return
     props.getList(this.state)
   }
   componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps)
   }
   componentWillMount() {
+    console.log('thisprops', this.props);
     this.props.getList(this.state)
   }
   componentWillUnmount() {
@@ -76,9 +78,9 @@ class Index extends Component {
     this.setState({
       page: this.state.page + 1
     })
-    const { page, perPage } = this.state
+    const { page, per_page } = this.state
     let params = {
-      page: this.state.page + 1, perPage: perPage
+      page: this.state.page + 1, per_page: per_page
     }
     console.log(this.props, 'onReachBottom')
     this.props.getList(params)

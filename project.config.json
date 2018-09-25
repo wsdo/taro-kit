@@ -1,10 +1,10 @@
 {
 	"miniprogramRoot": "./dist",
-	"projectname": "taro%20news",
+	"projectname": "taro-kit",
 	"description": "demo",
 	"appid": "wx8566afef50e5f76b",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
 		"minified": false,

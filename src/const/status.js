@@ -10,17 +10,15 @@ export const HTTP_STATUS = {
   GATEWAY_TIMEOUT: 504
 }
 
-export const COMMON_STATUS = {
-  NOT_FOUND: -40400, // "请求资源不存在",
-  API_NOT_FOUND: -40401, // "请求方法不存在",
-  EXCEPTION: -50000, // "系统异常",
-  PARAM_ERROR: -40001, // "参数错误",
-  AUTH_FAILED: -40100, // "认证错误",
-  NO_PERMISION: -40302, // "没有权限",
-  NET_REQUEST_FAILED: -40000, // "网络请求失败",
-  ERROR_TENANT: -401100, // "不存在选择的公司，当租户id为空的时候",
-  ERROR_NO_TENANT: -401200 // "租户id错误的时候",
-}
+// export const COMMON_STATUS = {
+//   NOT_FOUND: -40400, // "请求资源不存在",
+//   API_NOT_FOUND: -40401, // "请求方法不存在",
+//   EXCEPTION: -50000, // "系统异常",
+//   PARAM_ERROR: -40001, // "参数错误",
+//   AUTH_FAILED: -40100, // "认证错误",
+//   NO_PERMISION: -40302, // "没有权限",
+//   NET_REQUEST_FAILED: -40000, // "网络请求失败",
+// }
 
 // promise status
 export const SUCCESS = { success:'success'}
