@@ -6,6 +6,10 @@ const config = {
     '750': 1/2,
     '375': 1
   },
+  // deviceRatio:{
+  //   '750': 2,
+  //   '375': 1
+  // },
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: {

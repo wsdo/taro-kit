@@ -66,7 +66,7 @@ class Index extends Component {
 
   componentDidHide() { }
 
-  onShareAppMessage () {
+  onShareAppMessage() {
     return {
       title: '蜂窝煤',
       path: '/pages/index/index',
@@ -85,28 +85,29 @@ class Index extends Component {
     console.log(this.props, 'onReachBottom')
     this.props.getList(params)
   }
-render() {
-  return (
-    <View className='index'>
-      <View className='news'>
-        {
-          this.props.list.map((item, index) => {
-            return <View className='item' key={index}>
-              <View className='info'>
-                <View className='title'>{item.title}</View>
-                <View className='footer'>
-                  <View className='user'>{item.username}</View>
-                  <View className='comment'>{item.username}</View>
+  render() {
+    return (
+      <View className='index'>
+        <View className='data'>数据列表</View>
+        <View className='news'>
+          {
+            this.props.list.map((item, index) => {
+              return <View className='item' key={index}>
+                <View className='info'>
+                  <View className='title'>{item.title}</View>
+                  <View className='footer'>
+                    <View className='user'>{item.username}</View>
+                    <View className='comment'>{item.username}</View>
+                  </View>
                 </View>
+                <View className='rightImage'><Image calssName='img' src={item.image_url} /></View>
               </View>
-              <View className='rightImage'><Image calssName='img' src={item.image_url} /></View>
-            </View>
-          })
-        }
-      </View>
-    </View >
-  )
-}
+            })
+          }
+        </View>
+      </View >
+    )
+  }
 }
 
 export default Index

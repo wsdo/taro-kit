@@ -44,32 +44,32 @@ export function asyncAdd() {
 //     // .then(res => console.log(res.data))
 //   }
 // }
-// function articleList(data) {
-//   return { type: LIST, payload: data }
-// }
+function articleList(data) {
+  return { type: LIST, payload: data }
+}
 
-// export function list() {
-//   console.log('list')
-//   return (dispatch) => {
-//     // service.get('/v1/article/list')
-//     //   .then((res) => {
-//     //     dispatch(articleList(res.data.article))
-//     //   })
+export function list() {
+  console.log('list')
+  return (dispatch) => {
+    // service.get('/v1/article/list')
+    //   .then((res) => {
+    //     dispatch(articleList(res.data.article))
+    //   })
 
-//     Taro.request({
-//       url: 'http://api.shudong.wang/v1/article/list',
-//       data: {
-//         foo: 'foo',
-//         bar: 10
-//       },
-//       header: {
-//         'content-type': 'application/json'
-//       }
-//     }).then((res) => {
-//       dispatch(articleList(res.data.article))
-//     })
-//   }
-// }
+    Taro.request({
+      url: 'http://api.shudong.wang/v1/article/list',
+      data: {
+        foo: 'foo',
+        bar: 10
+      },
+      header: {
+        'content-type': 'application/json'
+      }
+    }).then((res) => {
+      dispatch(articleList(res.data.article))
+    })
+  }
+}
 
 
 // export const list = createApiAction(LIST, params => Taro.request({

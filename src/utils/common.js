@@ -23,8 +23,6 @@ export const promisify = (func, ctx) => {
   };
 };
 
-export const getToken = wx.getStorageSync('token')
-export const hideToast = wx.hideToast()
 // 下载图片
 export const downLoadImg = (imgurl, msg) => {
   return new Promise((resolve, reject) => {
@@ -52,10 +50,6 @@ export const promiseImage = (url) => {
   return new Promise(function (resolve, reject) {
     resolve(url)
   })
-}
-
-export const report = (name, filed) => {
-  wx.reportAnalytics(name, filed)
 }
 
 export const isChinese = (str) => {

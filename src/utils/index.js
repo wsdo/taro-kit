@@ -23,41 +23,11 @@ export const promisify = (func, ctx) => {
   };
 };
 
-export const getToken = wx.getStorageSync('token')
-export const hideToast = wx.hideToast()
-// 下载图片
-export const downLoadImg = (imgurl, msg) => {
-  return new Promise((resolve, reject) => {
-    let that = this
-    // util.showToast(msg + 'download...')
-    wx.downloadFile({
-      url: imgurl,
-      complete: function (res) {
-        console.log(res)
-        if (res.statusCode === 200) {
-          resolve(res.tempFilePath)
-        } else {
-          console.log('downloadstatusCode', res)
-          reject(new Error(res))
-        }
-      },
-      fail: function (res) {
-        console.log('downloadFilefail', res)
-      }
-    })
-  })
-}
-
 export const promiseImage = (url) => {
   return new Promise(function (resolve, reject) {
     resolve(url)
   })
 }
-
-export const report = (name, filed) => {
-  wx.reportAnalytics(name, filed)
-}
-
 export const isChinese = (str) => {
   if (escape(str).indexOf("%u") < 0) return false
   return true
@@ -82,16 +52,6 @@ export const getCurrentPageUrl = () => {
   let currentPage = pages[pages.length - 1]
   let url = currentPage.route
   return url
-}
-
-export const getSysteminfo = () => {
-  try {
-    let deviceInfo = wx.getSystemInfoSync()
-    const device = JSON.stringify(deviceInfo)
-  } catch (e) {
-    console.error('not support getSystemInfoSync api', err.message)
-  }
-  return device
 }
 
 export const formatTime = date => {
