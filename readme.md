@@ -1,5 +1,14 @@
+
+## 可以watch 这个项目，有更新，及时知道
+
 > 项目会不断迭代，有需求欢迎issue
 > 如果能帮到你，那就给个star呗！
+
+## 文章
+[【小程序taro最佳实践】http请求封装（方便使用，增加token，统一错误日志记录和上报）](https://segmentfault.com/a/1190000016533592)
+[【小程序taro 最佳实践】异步action优雅实践(简化流程)](https://segmentfault.com/a/1190000016534001)
+[【taro最佳实践】设置好基础开发字体尺寸](https://segmentfault.com/a/1190000016514478)
+
 ## 功能列表
 * [x] 封装api请求方式
 * [x] 更方便的创建action：增加createApiAction
