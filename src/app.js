@@ -8,7 +8,7 @@ import configStore from './store'
 
 import './app.styl'
 
-const store = configStore()
+const store = configStore
 
 class App extends Component {
 

@@ -2,7 +2,8 @@ import Taro, { Component } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
-import { add, minus, asyncAdd, list } from '../../actions/counter'
+// import { add, minus, asyncAdd, list } from '../../actions/counter'
+import counterAction from '../../actions/counter'
 
 import './index.styl'
 
@@ -23,16 +24,18 @@ import './index.styl'
 //   //   dispatch(list())
 //   // }
 // }))
-@connect(
-  state => ({
-    list: state.counter.list,
-  }),
-  (dispatch) => ({
-    getList(params) {
-      dispatch(list(params))
-    }
-  })
-)
+
+
+// @connect(
+//   state => ({
+//     list: state.counter.list,
+//   }),
+//   (dispatch) => ({
+//     getList(params) {
+//       dispatch(list(params))
+//     }
+//   })
+// )
 class Index extends Component {
 
   config = {
@@ -40,7 +43,6 @@ class Index extends Component {
   }
   constructor(props) {
     super(props)
-    console.log('props', props);
     // this.state = { date: new Date() }
     // let params = {
     //   page: 2, per_page: 2
@@ -49,14 +51,14 @@ class Index extends Component {
       page: 1, per_page: 10
     }
     if (Object.keys(props).length === 0) return
-    props.getList(this.state)
+    counterAction.list(this.state)
   }
   componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps)
   }
   componentWillMount() {
-    console.log('thisprops', this.props);
-    this.props.getList(this.state)
+    // this.props.getList(this.state)
+    counterAction.list(this.state)
   }
   componentWillUnmount() {
 
@@ -68,13 +70,13 @@ class Index extends Component {
 
   onShareAppMessage() {
     return {
-      title: '蜂窝煤',
+      title: 'taro issue',
       path: '/pages/index/index',
       imageUrl: '../../common/image/share.png'
     }
   }
   onReachBottom() {
-    console.log('触发到底部了')
+    // 触发到底部
     this.setState({
       page: this.state.page + 1
     })
@@ -82,16 +84,16 @@ class Index extends Component {
     let params = {
       page: this.state.page + 1, per_page: per_page
     }
-    console.log(this.props, 'onReachBottom')
-    this.props.getList(params)
+    counterAction.list(params)
   }
   render() {
+    if(!this.props.getList) return
     return (
       <View className='index'>
         <View className='data'>数据列表</View>
         <View className='news'>
           {
-            this.props.list.map((item, index) => {
+            this.props.getList.map((item, index) => {
               return <View className='item' key={index}>
                 <View className='info'>
                   <View className='title'>{item.title}</View>
@@ -109,5 +111,9 @@ class Index extends Component {
     )
   }
 }
-
-export default Index
+const mapStateToProps = (state, ownProps) => {
+  return {
+    getList: state.counter.list
+  }
+}
+export default connect(mapStateToProps)(Index)
