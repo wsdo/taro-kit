@@ -1,9 +1,3 @@
-/**
- * 创建Action
- *
- * @export
- * @param actionType Action类型
- */
 export function createAction(actionType) {
   return (payload) => ({
       type: actionType,
@@ -11,16 +5,7 @@ export function createAction(actionType) {
     })
 }
 
-/**
- * 创建API Action
- *
- * @export
- * @param actionType Action类型
- * @param [func] 请求API方法，返回Promise
- * @returns 请求之前dispatch { type: ${actionType}_request }
- *          请求成功dispatch { type: ${actionType}, payload: ${resolveData} }
- *          请求失败dispatch { type: ${actionType}_failure, payload: ${rejectData} }
- */
+
 export function createApiAction(actionType, func = () => {}) {
   return (
     params = {},
