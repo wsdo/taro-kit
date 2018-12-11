@@ -21,7 +21,7 @@ npm i
 
 npm start
 ```
-## 更方面的创建action
+## 更优雅的创建action
 > 未封装前
 ```
 function articleList(data) {
