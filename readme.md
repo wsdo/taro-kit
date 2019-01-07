@@ -96,9 +96,9 @@ export function list() {
   }
 }
 ```
-![2018-09-25-15-50-45](http://s.shudong.wang/2018-09-25-15-50-45.png)
+![2018-09-25-15-50-45](http://img.shudong.wang/2018-09-25-15-50-45.png)
 > 封装后请求api的使用方式
 ```
 export const list = createApiAction(LIST, params => api.get('news/list', params))
 ```
-![2018-09-25-15-51-45](http://s.shudong.wang/2018-09-25-15-51-45.png)
+![2018-09-25-15-51-45](http://img.shudong.wang/2018-09-25-15-51-45.png)
