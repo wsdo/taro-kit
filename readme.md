@@ -14,6 +14,51 @@
 * [x] 更方便的创建action：增加createApiAction
 * [x] 基础像素试着为1倍即：1px 会编译成 2rpx（小程序默认是2倍）符合习惯
 * [x] 基础demo案列
+* [x] 增加生成海报类
+
+
+#### 生成海报使用方式
+```dom
+        <view className='posterWrapper' style='width:{{posterWidth}}px;height:{{posterHeight}}px;' catchtap='prevent'>
+          <canvas className='poster' width='{{posterWidth* 2}}' height='{{posterHeight * 2}}' canvas-id='poster' style='width:{{posterWidth}}px;height:{{posterHeight}}px;'></canvas>
+        </view>
+```
+```js
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      posterWidth: '375',
+      posterHeight: '500',
+      posterInfo: {
+        tempBg: 'xxx.png'
+      },
+      offset: 1,
+    }
+    let config = {
+      id: 'poster',
+      background: {
+        image: this.state.posterInfo.tempBg,
+        width: this.state.posterWidth,
+        height: this.state.posterHeight,
+      }
+    }
+    console.log(config)
+    this.poster = new Poster(config)
+
+    // console.log(this.poster)
+  }
+
+  genPoster = () => {
+    const that = this
+    this.poster.drawBackground()
+    this.poster.ctx.draw(true, function () {
+      console.log('poster', '海报绘制完成')
+      that.poster.generateTempImage()
+    })
+  }
+```
+
 
 ## 用法
 ```
@@ -51,9 +96,9 @@ export function list() {
   }
 }
 ```
-![2018-09-25-15-50-45](http://img.shudong.wang/2018-09-25-15-50-45.png)
+![2018-09-25-15-50-45](http://s.shudong.wang/2018-09-25-15-50-45.png)
 > 封装后请求api的使用方式
 ```
 export const list = createApiAction(LIST, params => api.get('news/list', params))
 ```
-![2018-09-25-15-51-45](http://img.shudong.wang/2018-09-25-15-51-45.png)
+![2018-09-25-15-51-45](http://s.shudong.wang/2018-09-25-15-51-45.png)
