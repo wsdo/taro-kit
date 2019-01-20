@@ -4,21 +4,36 @@ export default class Poster {
   constructor(config) {
     this.id = config.id
     this.ctx = Taro.createCanvasContext(config.id)
-    const { background, scale = 1 } = config
+    const { background } = config
+    this.scale = 2 // 目前是写死两倍，如果想用响应式：使用前面生成的scale获取 Taro.getStorageSync('scale')
     this.items = config.items
     this.backgroundImage = background.image
-    this.width = background.width
-    this.height = background.height
-    this.scale = scale
+    this.width = background.width * this.scale
+    this.height = background.height * this.scale
+    // this.scale = Taro.getStorageSync('scale') || 1
   }
 
 
   // 背景
-  drawBackground = () => {
-    const w = this.width * this.scale
-    const h = this.height * this.scale
-    this.ctx.drawImage(this.backgroundImage, 0, 0, w, h)
+  // drawBackground = (img, x, y) => {
+  //   const w = this.width * this.scale
+  //   const h = this.height * this.scale
+  //   this.ctx.drawImage(this.backgroundImage, 0, 0, w, h)
+  //   this.ctx.save()
+  // }
+
+  // 背景
+  drawBackground = (img) => {
+    const w = this.width
+    const h = this.height
+    this.ctx.drawImage(img, 0, 0, w, h)
     this.ctx.save()
+  }
+  // 绘制图片
+  drawImage = (img, x = 0, y = 0, width, height) => {
+    this.ctx.save()
+    this.ctx.drawImage(img, x * this.scale, y * this.scale, width * this.scale, height * this.scale)
+    this.ctx.restore() //恢复之前保存的绘图上下文。
   }
 
   // 圆形图
@@ -62,7 +77,7 @@ export default class Poster {
 
   // 生成临时文件
   generateTempImage = () => {
-    let num = 1
+    let num = 2
     let destWidth = this.width * num
     let destHeight = this.height * num
     Taro.canvasToTempFilePath({
