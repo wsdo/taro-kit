@@ -3,6 +3,8 @@
 
 > 项目会不断迭代，有需求欢迎issue
 > 如果能帮到你，那就给个star呗！
+## 欢迎关注订阅号 和我互动
+![2019-04-16-18-15-56](http://s.shudong.wang/2019-04-16-18-15-56.png)
 
 ## 文章
 * [【小程序taro最佳实践】http请求封装（方便使用，增加token，统一错误日志记录和上报）](https://segmentfault.com/a/1190000016533592)
@@ -96,9 +98,9 @@ export function list() {
   }
 }
 ```
-![2018-09-25-15-50-45](http://img.shudong.wang/2018-09-25-15-50-45.png)
+![2018-09-25-15-50-45](http://s.shudong.wang/2018-09-25-15-50-45.png)
 > 封装后请求api的使用方式
 ```
 export const list = createApiAction(LIST, params => api.get('news/list', params))
 ```
-![2018-09-25-15-51-45](http://img.shudong.wang/2018-09-25-15-51-45.png)
+![2018-09-25-15-51-45](http://s.shudong.wang/2018-09-25-15-51-45.png)
