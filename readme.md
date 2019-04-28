@@ -3,14 +3,17 @@
 
 > 项目会不断迭代，有需求欢迎issue
 > 如果能帮到你，那就给个star呗！
-## 欢迎关注订阅号 和我互动
-![2019-04-16-18-15-56](http://s.shudong.wang/2019-04-16-18-15-56.png)
 
+> 7个月前输出了一套taro-kit 脚手架，有不少人加我微信，咨询一些问题，这段时间把这个脚手架升级后，总结并录制了课程，希望能帮助到大家，提高效率，节约时间。
+> 
+![2019-04-28-17-37-43](http://s.shudong.wang/2019-04-28-17-37-43.png)
 ## 文章
 * [【小程序taro最佳实践】http请求封装（方便使用，增加token，统一错误日志记录和上报）](https://segmentfault.com/a/1190000016533592)
 * [【小程序taro 最佳实践】异步action优雅实践(简化流程)](https://segmentfault.com/a/1190000016534001)
 * [【taro最佳实践】设置好基础开发字体尺寸](https://segmentfault.com/a/1190000016514478)
 
+* [Taro小程序，从0到1架构项目，打造自己的完美脚手架。
+](https://segmentfault.com/a/1190000019020009)
 ## 功能列表
 * [x] 封装api请求方式
 * [x] 更方便的创建action：增加createApiAction
@@ -18,89 +21,67 @@
 * [x] 基础demo案列
 * [x] 增加生成海报类
 
+## 实现列表
+01.taro从0到1项目架构课程介绍
+02.初始化项目流程介绍、目录设计
+03.让alias别名解决路径引用的烦恼
+04.请求api返回redux的状态流程
+05.封装request get请求，给url添加时间戳防止浏览器缓存
+06.封装request post Content-Type 分类请求
+07.把taro-advance脚手架推送到私有仓库
+08.弱网请求失败时自动发起api重试
+09.异常日志上报封装设计思路
+10.异常日志上报封装，五种级别输出。
+11.上报收集日志平台系统介绍
+12.实战接入日志平台
+13.深度序列化错误error控制台上报
+14.登录流程讲解（前端和后端实现流程）
+15.登录实现详细讲解（token附加到请求header头）
+16.用户授权后更新用户信息流程
+17.设计createApiAction自动dispatch优化开发体验
+18.改造actionType支持庞大业务
+19.Action三种ActionType的集合
+20.简化reducers的swich繁琐操作
+21.增加request的状态
+22.课程总结
 
-#### 生成海报使用方式
-```dom
-        <view className='posterWrapper' style='width:{{posterWidth}}px;height:{{posterHeight}}px;' catchtap='prevent'>
-          <canvas className='poster' width='{{posterWidth* 2}}' height='{{posterHeight * 2}}' canvas-id='poster' style='width:{{posterWidth}}px;height:{{posterHeight}}px;'></canvas>
-        </view>
-```
-```js
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      posterWidth: '375',
-      posterHeight: '500',
-      posterInfo: {
-        tempBg: 'xxx.png'
-      },
-      offset: 1,
-    }
-    let config = {
-      id: 'poster',
-      background: {
-        image: this.state.posterInfo.tempBg,
-        width: this.state.posterWidth,
-        height: this.state.posterHeight,
-      }
-    }
-    console.log(config)
-    this.poster = new Poster(config)
-
-    // console.log(this.poster)
-  }
-
-  genPoster = () => {
-    const that = this
-    this.poster.drawBackground()
-    this.poster.ctx.draw(true, function () {
-      console.log('poster', '海报绘制完成')
-      that.poster.generateTempImage()
-    })
-  }
-```
+## Taro小程序，从0到1架构项目，打造自己的完美脚手架。
+>这个可以让你的Taro小程序跑的更优雅一些
 
 
-## 用法
-```
-npm i
+>https://github.com/wsdo/taro-kit
 
-npm start
-```
-## 更优雅的创建action
-> 未封装前
-```
-function articleList(data) {
-  return { type: LIST, payload: data }
-}
 
-export function list() {
-  console.log('list')
-  return (dispatch) => {
-    // service.get('/v1/article/list')
-    //   .then((res) => {
-    //     dispatch(articleList(res.data.article))
-    //   })
+#### 升级后的项目仓库地址： 观看视频的同学加微信，发送你的gitlab账号，添加权限，你就看源代码了。
+https://gitlab.com/itxishu/taro-advance.git
 
-    Taro.request({
-      url: 'http://api.shudong.wang/v1/article/list',
-      data: {
-        foo: 'foo',
-        bar: 10
-      },
-      header: {
-        'content-type': 'application/json'
-      }
-    }).then((res) => {
-      dispatch(articleList(res.data.article))
-    })
-  }
-}
-```
-![2018-09-25-15-50-45](http://s.shudong.wang/2018-09-25-15-50-45.png)
-> 封装后请求api的使用方式
-```
-export const list = createApiAction(LIST, params => api.get('news/list', params))
-```
-![2018-09-25-15-51-45](http://s.shudong.wang/2018-09-25-15-51-45.png)
+## 观看地址 思否编程 segmentfault
+https://segmentfault.com/ls/1650000018991514
+
+## 适宜人群
+* taro小程序开发者
+* 需要taro基础架构开发人员
+
+## 课程说明
+
+本次课程主要针对于，正在使用taro小程序框架的同学，通过课程，你可以学到，框架的request请求优雅封装，异常自动重试，日志异常上报，
+redux的三剑客优雅的配合使用，
+reducer 的swich简化繁琐操作，
+增加state的请求前，请求成功和失败的状态等。
+从开始架构足以支撑庞大业务小程序项目
+
+课程有问题可以在 https://shudong.wang 我的博客扎到我，添加微信咨询
+
+
+![2019-04-28-22-09-17](http://s.shudong.wang/2019-04-28-22-09-17.png)
+#### 课程主站
+https://www.itxishu.com
+https://github.com/itxishu
+
+
+
+#### 关于
+https://shudong.wang
+
+#### 有问题来这里提问
+http://t.shudong.wang
