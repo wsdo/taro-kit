@@ -21,36 +21,31 @@
 * [x] 基础demo案列
 * [x] 增加生成海报类
 
-## 实现列表
-01.taro从0到1项目架构课程介绍
-02.初始化项目流程介绍、目录设计
-03.让alias别名解决路径引用的烦恼
-04.请求api返回redux的状态流程
-05.封装request get请求，给url添加时间戳防止浏览器缓存
-06.封装request post Content-Type 分类请求
-07.把taro-advance脚手架推送到私有仓库
-08.弱网请求失败时自动发起api重试
-09.异常日志上报封装设计思路
-10.异常日志上报封装，五种级别输出。
-11.上报收集日志平台系统介绍
-12.实战接入日志平台
-13.深度序列化错误error控制台上报
-14.登录流程讲解（前端和后端实现流程）
-15.登录实现详细讲解（token附加到请求header头）
-16.用户授权后更新用户信息流程
-17.设计createApiAction自动dispatch优化开发体验
-18.改造actionType支持庞大业务
-19.Action三种ActionType的集合
-20.简化reducers的swich繁琐操作
-21.增加request的状态
-22.课程总结
+## 升级功能列表
+* [x] 01.taro从0到1项目架构课程介绍
+* [x] 02.初始化项目流程介绍、目录设计
+* [x] 03.让alias别名解决路径引用的烦恼
+* [x] 04.请求api返回redux的状态流程
+* [x] 05.封装request get请求，给url添加时间戳防止浏览器缓存
+* [x] 06.封装request post Content-Type 分类请求
+* [x] 07.把taro-advance脚手架推送到私有仓库
+* [x] 08.弱网请求失败时自动发起api重试
+* [x] 09.异常日志上报封装设计思路
+* [x] 10.异常日志上报封装，五种级别输出。
+* [x] 11.上报收集日志平台系统介绍
+* [x] 12.实战接入日志平台
+* [x] 13.深度序列化错误error控制台上报
+* [x] 14.登录流程讲解（前端和后端实现流程）
+* [x] 15.登录实现详细讲解（token附加到请求header头）
+* [x] 16.用户授权后更新用户信息流程
+* [x] 17.设计createApiAction自动dispatch优化开发体验
+* [x] 18.改造actionType支持庞大业务
+* [x] 19.Action三种ActionType的集合
+* [x] 20.简化reducers的swich繁琐操作
+* [x] 21.增加request的状态
+* [x] 22.课程总结
 
-## Taro小程序，从0到1架构项目，打造自己的完美脚手架。
 >这个可以让你的Taro小程序跑的更优雅一些
-
-
->https://github.com/wsdo/taro-kit
-
 
 #### 升级后的项目仓库地址： 观看视频的同学加微信，发送你的gitlab账号，添加权限，你就看源代码了。
 https://gitlab.com/itxishu/taro-advance.git
