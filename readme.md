@@ -50,8 +50,13 @@
 #### 升级后的项目仓库地址： 观看视频的同学加微信，发送你的gitlab账号，添加权限，你就看源代码了。
 https://gitlab.com/itxishu/taro-advance.git
 
-## 观看地址 思否编程 segmentfault
-https://segmentfault.com/ls/1650000018991514
+## 观看地址：  cctalk 腾讯课堂 思否编程 segmentfault
+> 上面都可以搜搜到，建议cctalk哈
+
+#### 建议cctalk购买
+https://www.cctalk.com/m/course/168709
+
+<!-- https://segmentfault.com/ls/1650000018991514 -->
 
 ## 适宜人群
 * taro小程序开发者
