@@ -56,7 +56,7 @@ https://gitlab.com/itxishu/taro-advance.git
 #### 建议cctalk购买
 https://www.cctalk.com/m/course/168709
 
-<!-- https://segmentfault.com/ls/1650000018991514 -->
+https://segmentfault.com/ls/1650000018991514
 
 ## 适宜人群
 * taro小程序开发者
