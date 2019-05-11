@@ -1,10 +1,20 @@
 
+
+
 ## 可以watch 这个项目，有更新，及时知道
 
 > 项目会不断迭代，有需求欢迎issue
 > 如果能帮到你，那就给个star呗！
 
 > 7个月前输出了一套taro-kit 脚手架，有不少人加我微信，咨询一些问题，这段时间把这个脚手架升级后，总结并录制了课程，希望能帮助到大家，提高效率，节约时间。
+## 项目更新：
+> 2019年05月11日
+* 更新依赖到：1.2.26
+
+## 更新项目依赖包：
+```
+taro update project
+```
 > 
 ![2019-04-28-17-37-43](http://s.shudong.wang/2019-04-28-17-37-43.png)
 ## 文章
@@ -55,8 +65,7 @@ https://gitlab.com/itxishu/taro-advance.git
 
 #### 建议cctalk购买
 
-60优惠券：
-https://www.cctalk.com/m/coupon/?id=E1571513A01321A9CEAEBC1A38146FE8
+在 https://shudong.wang 加我微信 获得cctalk 60元优惠券
 
 https://www.cctalk.com/m/course/168709
 
