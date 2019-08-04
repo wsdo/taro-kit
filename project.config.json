@@ -1,5 +1,5 @@
 {
-	"miniprogramRoot": "./dist",
+	"miniprogramRoot": "dist/",
 	"projectname": "taro-kit",
 	"description": "demo",
 	"appid": "wx8566afef50e5f76b",

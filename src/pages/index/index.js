@@ -90,7 +90,7 @@ class Index extends Component {
     if(!this.props.getList) return
     return (
       <View className='index'>
-        <View className='data'>数据列表</View>
+        <View className='data'>taro issue list</View>
         <View className='news'>
           {
             this.props.getList.map((item, index) => {
