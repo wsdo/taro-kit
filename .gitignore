@@ -4,3 +4,4 @@ dist/
 node_modules/
 img/
 package-lock.json
+yarn-error.log
