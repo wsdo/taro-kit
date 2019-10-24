@@ -3,7 +3,7 @@
  * @Contact me: https://shudong.wang/about
  * @Date: 2019-09-16 13:55:47
  * @LastEditors: starkwang
- * @LastEditTime: 2019-10-24 15:13:52
+ * @LastEditTime: 2019-10-24 15:37:26
  * @Description: file content
  -->
 
@@ -17,9 +17,8 @@
 > 1年前输出了一套taro-kit 脚手架，有不少人加我微信，咨询一些问题，这段时间把这个脚手架升级后，总结并录制了课程，希望能帮助到大家，提高效率，节约时间。
 
 ## 项目更新：
-> 2019年08月04日 星期日
-* 更新依赖到：1.3.18
-
+> 2019年10月24日 星期四
+* 更新依赖到：1.3.21
 ## 更新项目依赖包：
 ```
 taro update project
