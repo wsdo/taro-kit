@@ -1,3 +1,11 @@
+<!--
+ * @Author: starkwang
+ * @Contact me: https://shudong.wang/about
+ * @Date: 2019-09-16 13:55:47
+ * @LastEditors: starkwang
+ * @LastEditTime: 2019-10-24 15:13:52
+ * @Description: file content
+ -->
 
 
 
@@ -64,9 +72,9 @@ https://gitlab.com/itxishu/taro-advance.git
 ## 观看地址：  cctalk 腾讯课堂 思否编程 segmentfault
 > 上面都可以搜搜到，建议cctalk哈
 
-#### 建议cctalk购买
+#### 购买路径
 
-在 https://shudong.wang 加我微信 获得cctalk 60元优惠券
+在 https://shudong.wang 加我微信
 
 https://www.cctalk.com/m/course/168709
 
@@ -97,5 +105,5 @@ https://github.com/itxishu
 #### 关于
 https://shudong.wang
 
-#### 有问题来这里提问
-http://t.shudong.wang
+#### 有问题加微信问吧
+http://shudong.wang
