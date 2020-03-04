@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@tarojs/async-await": "2.0.5",
 		"@tarojs/components": "2.0.5",
+		"@tarojs/mini-runner": "^2.0.5",
 		"@tarojs/redux": "2.0.5",
 		"@tarojs/redux-h5": "2.0.5",
 		"@tarojs/router": "2.0.5",
