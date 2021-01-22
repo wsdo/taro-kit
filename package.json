@@ -17,15 +17,15 @@
 	"author": "starkwang",
 	"license": "MIT",
 	"dependencies": {
-		"@tarojs/async-await": "2.0.5",
-		"@tarojs/components": "2.0.5",
+		"@tarojs/async-await": "3.0.24",
+		"@tarojs/components": "3.0.24",
 		"@tarojs/mini-runner": "^2.0.5",
-		"@tarojs/redux": "2.0.5",
-		"@tarojs/redux-h5": "2.0.5",
-		"@tarojs/router": "2.0.5",
-		"@tarojs/taro": "2.0.5",
-		"@tarojs/taro-h5": "2.0.5",
-		"@tarojs/taro-weapp": "2.0.5",
+		"@tarojs/redux": "3.0.24",
+		"@tarojs/redux-h5": "3.0.24",
+		"@tarojs/router": "3.0.24",
+		"@tarojs/taro": "3.0.24",
+		"@tarojs/taro-h5": "3.0.24",
+		"@tarojs/taro-weapp": "3.0.24",
 		"config": "^2.0.1",
 		"nervjs": "^1.5.6",
 		"redux": "^4.0.0",
@@ -33,11 +33,11 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"devDependencies": {
-		"@tarojs/plugin-babel": "2.0.5",
-		"@tarojs/plugin-csso": "2.0.5",
-		"@tarojs/plugin-stylus": "2.0.5",
-		"@tarojs/plugin-uglifyjs": "2.0.5",
-		"@tarojs/webpack-runner": "2.0.5",
+		"@tarojs/plugin-babel": "3.0.24",
+		"@tarojs/plugin-csso": "3.0.24",
+		"@tarojs/plugin-stylus": "3.0.24",
+		"@tarojs/plugin-uglifyjs": "3.0.24",
+		"@tarojs/webpack-runner": "3.0.24",
 		"@types/react": "^16.4.8",
 		"@types/webpack-env": "^1.13.6",
 		"babel-eslint": "^8.2.3",
@@ -47,9 +47,9 @@
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
 		"eslint": "^4.19.1",
-		"eslint-config-taro": "2.0.5",
+		"eslint-config-taro": "3.0.24",
 		"eslint-plugin-import": "^2.12.0",
 		"eslint-plugin-react": "^7.8.2",
-		"eslint-plugin-taro": "2.0.5"
+		"eslint-plugin-taro": "3.0.24"
 	}
 }
