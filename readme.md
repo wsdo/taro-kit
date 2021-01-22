@@ -37,8 +37,7 @@ $ cnpm install -g @tarojs/cli
 taro update project v版本号
 ```
 > 
-<!-- ![2019-04-28-17-37-43](http://s.shudong.wang/2019-04-28-17-37-43.png) -->
-![20210121215029](https://s.shudong.wang/note/20210121215029.png)
+![20210122111946](http://s.shudong.wang/note/20210122111946.png)
 ## 文章
 * [【小程序taro最佳实践】http请求封装（方便使用，增加token，统一错误日志记录和上报）](https://segmentfault.com/a/1190000016533592)
 * [【小程序taro 最佳实践】异步action优雅实践(简化流程)](https://segmentfault.com/a/1190000016534001)
