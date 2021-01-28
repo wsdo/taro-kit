@@ -2,6 +2,7 @@ const config = {
   projectName: 'demo',
   date: '2018-9-18',
   designWidth: 750,
+  framework: 'react',
   deviceRatio:{
     '750': 1/2,
     '375': 1
