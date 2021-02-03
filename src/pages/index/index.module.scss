@@ -1,0 +1,19 @@
+.indexBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+  .desc {
+    margin-top: 25px;
+  }
+  .routerLink {
+    width: 300px;
+    margin-top: 35px;
+  }
+}

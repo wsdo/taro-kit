@@ -1,80 +1,78 @@
 const config = {
-  projectName: 'demo',
-  date: '2018-9-18',
+  projectName: 'taro-kit',
+  date: '2020-10-16',
   designWidth: 750,
-  framework: 'react',
-  deviceRatio:{
-    '750': 1/2,
-    '375': 1
+  deviceRatio: {
+    640: 2.34 / 2,
+    750: 1,
+    828: 1.81 / 2,
   },
-  // deviceRatio:{
-  //   '750': 2,
-  //   '375': 1
-  // },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: {
-    babel: {
-      sourceMap: true,
-      presets: [
-        'env'
-      ],
-      plugins: [
-        'transform-class-properties',
-        'transform-decorators-legacy',
-        'transform-object-rest-spread'
-      ]
-    },
-    typescript: {
-      compilerOptions: {
-        allowSyntheticDefaultImports: true,
-        baseUrl: '.',
-        declaration: false,
-        experimentalDecorators: true,
-        jsx: 'preserve',
-        jsxFactory: 'Nerv.createElement',
-        module: 'commonjs',
-        moduleResolution: 'node',
-        noImplicitAny: false,
-        noUnusedLocals: true,
-        outDir: './dist/',
-        preserveConstEnums: true,
-        removeComments: false,
-        rootDir: '.',
-        sourceMap: true,
-        strictNullChecks: true,
-        target: 'es6'
+  plugins: [],
+  defineConstants: {},
+  copy: {
+    patterns: [],
+    options: {},
+  },
+  framework: 'react',
+  mini: {
+    postcss: {
+      pxtransform: {
+        enable: true,
+        config: {},
       },
-      include: [
-        'src/**/*'
-      ],
-      exclude: [
-        'node_modules'
-      ],
-      compileOnSave: false
-    }
-  },
-  defineConstants: {
-  },
-  weapp: {
-
+      url: {
+        enable: true,
+        config: {
+          limit: 1024, // 设定转换尺寸上限
+        },
+      },
+      cssModules: {
+        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+        config: {
+          namingPattern: 'module', // 转换模式，取值为 global/module
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
   },
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
-    module: {
-      postcss: {
-        autoprefixer: {
-          enable: true
-        }
-      }
-    }
-  }
-}
+    postcss: {
+      autoprefixer: {
+        enable: true,
+        config: {},
+      },
+      cssModules: {
+        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+        config: {
+          namingPattern: 'module', // 转换模式，取值为 global/module
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
+    // 小程序端
+    weapp: {
+      module: {
+        postcss: {
+          cssModules: {
+            enable: true,
+            config: {
+              namingPattern: 'module',
+              generateScopedName: '[name]__[local]___[hash:base64:5]',
+            },
+          },
+        },
+      },
+    },
+  },
+};
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require('./prod'));
+};

@@ -1,0 +1,13 @@
+**/dist/**
+**/node_modules/**
+**/server.js
+**/webpack.config*.js
+**/flow-typed/**
+src/types/**
+src/serviceWorker.js
+*.md
+*.log
+*.lock
+scripts/**
+public/**/*
+config/**/*
