@@ -26,6 +26,12 @@ $ cnpm install -g @tarojs/cli
 
 ## 项目更新：
 
+> 2021 年 05 月 27 日 星期四
+
+- 更新@tarojs/taro到：3.2.10
+- 添加海报生成插件：[taro-weapp-poster](https://github.com/Clycheng/taro-weapp-poster)
+
+
 > 2021 年 02 月 03 日 星期三
 
 - 更新依赖到：3.0.26
