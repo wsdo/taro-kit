@@ -26,9 +26,10 @@ $ cnpm install -g @tarojs/cli
 
 ## 项目更新：
 
-> 2021 年 05 月 27 日 星期四
+> 2021年11月30日
 
-- 更新@tarojs/taro到：3.2.10
+- 更新@tarojs/taro到：3.3.15
+
 - 添加海报生成插件：[taro-weapp-poster](https://github.com/Clycheng/taro-weapp-poster)
 
 
@@ -42,41 +43,6 @@ $ cnpm install -g @tarojs/cli
 - 添加 yarn.lock 文件
 - 更新 config 文件
 
-## 更新生产依赖包：
-
-- @babel/runtime: ^7.7.7,
-- @rematch/core: ^1.4.0,
-- @rematch/loading: ^1.2.1,
-- @tarojs/components: 3.0.26,
-- @tarojs/react: 3.0.26,
-- @tarojs/runtime: 3.0.26,
-- @tarojs/taro: 3.0.26,
-- react: ^16.10.0,
-- react-dom: ^16.10.0,
-- react-redux: ^7.2.0,
-- redux: ^4.0.0,
-- redux-logger: ^3.0.6,
-- redux-thunk: ^2.3.0,
-- taro-ui: ^3.0.0-alpha.3
-
-## 更新开发依赖包
-
-- @babel/core: ^7.8.0,
-- @tarojs/mini-runner: 3.0.26,
-- @tarojs/webpack-runner: 3.0.26,
-- @types/react: ^16.0.0,
-- @types/react-redux: ^7.1.9,
-- @types/webpack-env: ^1.13.6,
-- @typescript-eslint/eslint-plugin: ^2.x,
-- @typescript-eslint/parser: ^2.x,
-- babel-preset-taro: 3.0.26,
-- eslint: ^6.8.0,
-- eslint-config-taro: 3.0.26,
-- eslint-plugin-import: ^2.12.0,
-- eslint-plugin-react: ^7.8.2,
-- eslint-plugin-react-hooks: ^1.6.1,
-- stylelint: 9.3.0,
-- typescript: ^3.7.0
 
 ```
 taro update project v版本号
@@ -132,15 +98,10 @@ taro update project v版本号
 
 https://gitlab.com/itxishu/taro-advance.git
 
-## 观看地址： cctalk 腾讯课堂 思否编程 segmentfault
-
-> 上面都可以搜搜到，建议 cctalk 哈
+## 观看地址：segmentfault
 
 #### 购买路径
-
 在 https://shudong.wang 加我微信
-
-https://www.cctalk.com/m/course/168709
 
 https://segmentfault.com/ls/1650000018991514
 
@@ -157,14 +118,6 @@ https://segmentfault.com/ls/1650000018991514
 
 ![2019-04-28-22-09-17](http://s.shudong.wang/2019-04-28-22-09-17.png)
 
-#### 课程主站
-
-https://www.itxishu.com https://github.com/wsdo/qa
-
-#### 关于
-
-https://shudong.wang
-
 #### 有问题加微信问吧
 
-http://shudong.wang
+https://www.shudong.wang/about

@@ -2,10 +2,9 @@
 export const currentEnv = process.env.FIG_ENV;
 const ctext = currentEnv !== 'prod' ? `前端指北${currentEnv}` : '前端指北';
 
-console.log('123');
 // 不要删除，用来识别当前项目环境
 console.log(
-  `\n %c ${ctext} %c https://kaikeba.com \n`,
+  `\n %c ${ctext} %c https://www.feup.cn \n`,
   'color: #fff; background: #008bf8; padding:5px 0; font-size:12px;font-weight: bold;',
   'background: #008bf8; padding:5px 0; font-size:12px;',
 );
